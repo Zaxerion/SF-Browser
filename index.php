@@ -90,7 +90,20 @@ $items = scandir($currentDir);
     <style>
         body { font-family: sans-serif; padding: 30px; max-width: 800px; margin: auto; }
         a { color: #0366d6; text-decoration: none; }
-        .item { padding: 6px 0; display: flex; justify-content: space-between; }
+
+        .item {
+            padding: 6px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .item:hover {
+            background-color: #f6f8fa;
+        }
+
         form { margin-bottom: 15px; }
         textarea { width: 100%; }
 
@@ -208,7 +221,6 @@ function showToast() {
     padding: 10px 20px;
     border-radius: 8px;
     display: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     z-index: 9999;
 ">
     Link disalin ke clipboard!
